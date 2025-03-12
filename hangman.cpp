@@ -20,6 +20,7 @@ bool getHint(std::string secret, char guessLetter)
 
     // The procedure should return true if the letter was in the word,
     // and return false if the letter was not in the word.
+    
     return false;
 }
 
@@ -60,7 +61,7 @@ int main()
 
     std::cout << "Welcome to Hangman!\n";
     
-    while (true)    // TODO: update this condition to run when the game should be played
+    while (lives > 0)    // TODO: update this condition to run when the game should be played
     {
         std::cout << "\nEnter your guess: ";
         std::cin >> letterGuess;
@@ -78,7 +79,14 @@ int main()
         // TODO: Write code below that asks you whether you want to guess the word
         // and allow the user to guess the word using the variable wordGuess
         std::cout << "Would you like to guess the word (y/n)?\n";
-        
+        std::string response;
+        std::cin >> response;
+        if (response == "y")
+        {
+            std::cout << "What is your guess?\n";
+            std::cin >> wordGuess;
+        }
+
     }
 
     std::cout << "Some winning or losing message here";
