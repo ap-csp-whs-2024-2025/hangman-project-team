@@ -11,7 +11,7 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
-std::vector<std::string> hint = std::vector<std::string>(8, "_");    // Note that hint is globally available; we want it to be like this for this project
+std::vector<std::string> hint = {"_", "_", "_", "_", "_", "_", "_", "_"};   // Note that hint is globally available; we want it to be like this for this project
 
 bool getHint(std::string secret, char guessLetter)
 {
@@ -35,7 +35,7 @@ int main()
         "solution",
         "mountain",
         "platinum",
-        "qlphabet",
+        "alphabet",
         "necklace",
         "elevator",
         "diamonds",
@@ -65,7 +65,7 @@ int main()
     {
         std::cout << "\nEnter your guess: ";
         std::cin >> letterGuess;
-        
+
         // TODO: Write code that displays the hint; you can either manually display or use the
         // custom display procedure that I wrote for you
         // TODO: Display hangman person if applicable; or you can display the number of lives left
@@ -81,11 +81,7 @@ int main()
         std::cout << "Would you like to guess the word (y/n)?\n";
         std::string response;
         std::cin >> response;
-        if (response == "y")
-        {
-            std::cout << "What is your guess?\n";
-            std::cin >> wordGuess;
-        }
+        
 
     }
 
