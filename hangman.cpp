@@ -20,8 +20,15 @@ bool getHint(std::string secret, char guessLetter)
 
     // The procedure should return true if the letter was in the word,
     // and return false if the letter was not in the word.
-    
-    return false;
+
+    if () // the guessed letter is in the secret word
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 
@@ -31,7 +38,7 @@ int main()
 
     // Creating a word bank
     std::vector<std::string> wordList = {
-        "education",
+        "educator",
         "solution",
         "mountain",
         "platinum",
@@ -50,7 +57,7 @@ int main()
         "baseball",
         "kangaroo",
         "horrible",
-        "animals"
+        "doberman"
     };
     
     // answer is a random word from the word bank
